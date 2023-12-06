@@ -24,10 +24,11 @@ jobs:
       - name: Test project
         run: npm test
 
-  deploy:
+  deploy-success:
     runs-on: ubuntu-latest
     needs: build
-    if: ${{ success() && github.ref == 'efs/heads/main' }}
+    # if: ${{ success() && github.ref == 'efs/heads/main' }}
+    if: ${{ success() }}
     steps:
       - name: Deploy to production
         run: |
@@ -39,7 +40,8 @@ jobs:
   deploy-failure:
     runs-on: ubuntu-latest
     needs: build
-    if: ${{ failure() || github.ref!= 'efs/heads/main' }}
+    # if: ${{ failure() || github.ref!= 'efs/heads/main' }}
+    if: ${{ failure() }}
     steps:
       - name: Deploy to production (failure)
         run: |

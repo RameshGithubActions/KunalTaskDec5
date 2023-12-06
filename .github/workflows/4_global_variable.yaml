@@ -10,8 +10,8 @@ jobs:
       - name: Set Global Variable
         run: |
           echo "MY_GLOBAL_VARIABLE=Hello, Ramesh!" >> $GITHUB_ENV
-        env:
-          MY_GLOBAL_VARIABLE: "Hello, World!"
+        # env:
+        #   MY_GLOBAL_VARIABLE: "Hello, World!"
       - name: Use Global Variable in Step 1
         run: |
           echo "Step 1: ${{ env.MY_GLOBAL_VARIABLE }}"

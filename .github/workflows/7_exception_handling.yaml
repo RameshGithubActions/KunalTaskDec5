@@ -9,13 +9,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.12
       - name: Install dependencies
         run: |
           npm init -y
           #   Check the version of Node and npm
-          node -v
-          npm -v
-          pwd
+          python add_build.py
           ls
           #   npm init -y
           #   npm install

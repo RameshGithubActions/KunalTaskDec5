@@ -17,14 +17,9 @@ jobs:
         run: npm init -y
       - name: Write build in Package
         run: |
-          ls  
           python add_build.py
       - name: Install dependencies
-        run: |
-          #   Check the version of Node and npm
-          ls
-          #   npm init -y
-          #   npm install
+        run: npm install
       - name: Build project
         run: npm run build
       - name: Test project

@@ -1,0 +1,43 @@
+name: My workflow
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Build project
+        run: npm run build
+      - name: Test project
+        run: npm test
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    if: ${{ success() && github.ref == 'efs/heads/main' }}
+    steps:
+      - name: Deploy to production
+        run: |
+          echo "Deploy to production"
+      - name: Deploy to staging
+        run: |
+          echo "Deploy to staging"
+
+  deploy-failure:
+    runs-on: ubuntu-latest
+    needs: build
+    if: ${{ failure() || github.ref!= 'efs/heads/main' }}
+    steps:
+      - name: Deploy to production (failure)
+        run: |
+          echo "Deploy to production failed"
+        #   exit 1
+      - name: Deploy to staging (failure)
+        run: |
+          echo "Deploy to staging failed"
+        #   exit 1

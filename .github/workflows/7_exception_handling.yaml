@@ -13,11 +13,13 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.12
+      - name: Initiate npm
+        run: npm init -y
+      - name: Write build in Package
+        run: python add_buld.py
       - name: Install dependencies
         run: |
-          npm init -y
           #   Check the version of Node and npm
-          python add_build.py
           ls
           #   npm init -y
           #   npm install

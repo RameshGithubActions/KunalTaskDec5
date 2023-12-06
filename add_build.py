@@ -1,6 +1,6 @@
 import json
 
-with open('package_Copy.json', 'r+') as f:
+with open('package.json', 'r+') as f:
     data = json.load(f)
     data['scripts']['build'] = 'webpack --config webpack.config.js'
     print(data['scripts'])

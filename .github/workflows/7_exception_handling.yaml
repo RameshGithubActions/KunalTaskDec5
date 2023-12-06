@@ -11,13 +11,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dependencies
         run: |
-          git clone https://github.com/linkeddata/mashlib.git
-          cd mashlib
-          git checkout 1cccf2c
-          npm install
-
-        #   rm -rf node_modules
-        #   npm install
+          rm -fr node_modules/
+          npm install npm@latest -g
       - name: Build project
         run: npm run build
       - name: Test project

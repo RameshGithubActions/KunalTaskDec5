@@ -18,7 +18,7 @@ jobs:
       - name: Write build in Package
         run: |
           ls  
-          python add_buld.py
+          python add_build.py
       - name: Install dependencies
         run: |
           #   Check the version of Node and npm

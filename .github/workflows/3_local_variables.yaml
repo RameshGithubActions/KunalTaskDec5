@@ -1,0 +1,24 @@
+name: Local Variables Example
+on:
+  push:
+    branches:
+      - main
+jobs:
+  example_job:
+    runs-on: ubuntu-latest
+    env:
+      ENV_LOCAL_STRING: "Hello, Ramesh!"
+      ENV_LOCAL_INTEGER: 1234
+    steps:
+      - name: Set Local Variable
+        run: |
+          NORMAL_LOCAL_STRING="Hello, World!"
+          NORMAL_LOCAL_INTEGER=5678
+          echo "Normal local strign: $NORMAL_LOCAL_STRING"
+          echo "Normal local integer: $NORMAL_LOCAL_INTEGER"
+      - name: Use Local Variable
+        run: |
+          echo "Using Environment - local string: ${{ env.ENV_LOCAL_STRING }}"
+          echo "Using Environment - local integer: ${{ env.ENV_LOCAL_INTEGER }}"
+
+

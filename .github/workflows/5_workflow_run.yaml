@@ -9,5 +9,5 @@ jobs:
     steps:
       - run: |
           echo "Glaboal Variables Completed Check Again"
-          WORKFLOW_RUN_VARIABLE: 123
+          WORKFLOW_RUN_VARIABLE=123
           echo "Workflow Run Variable: $WORKFLOW_RUN_VARIABLE"

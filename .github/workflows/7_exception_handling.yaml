@@ -23,6 +23,11 @@ jobs:
         run: npm run build
       - name: Test project
         run: npm test
+      - name: Show Github Ref
+        run: echo "Github Ref = ${{ github.ref }}"
+      - name: Extract Branch Name
+        run: echo "Branch Name = ${{ github.event_name == 'push' && github.ref.split('/').pop() }}"
+
 
   deploy-success:
     runs-on: ubuntu-latest

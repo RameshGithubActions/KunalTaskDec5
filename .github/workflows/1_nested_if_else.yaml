@@ -1,0 +1,25 @@
+name: Nested If-Else Example
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check_conditions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check conditions
+        run: |
+          if [ ${{ github.event_name }} == 'push' ]; then
+            if [ ${{ github.event.head_commit.message }} == 'deploy' ]; then
+              echo "Deploying the application..."
+            else
+              echo "Not deploying. Commit message does not contain 'deploy'."
+            fi
+          else
+            echo "Not a push event."
+          fi
+
+
+          

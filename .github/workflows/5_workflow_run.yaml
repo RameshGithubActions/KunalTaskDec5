@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Glaboal Variables Completed Check Again"
+          echo "Global Variables Completed Check Again"
           WORKFLOW_RUN_VARIABLE=123
           echo "Workflow Run Variable: $WORKFLOW_RUN_VARIABLE"

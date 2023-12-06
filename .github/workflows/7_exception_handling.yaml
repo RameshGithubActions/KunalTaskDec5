@@ -14,6 +14,7 @@ jobs:
           #   Check the version of Node and npm
           node -v
           npm -v
+          pwd
           ls
           #   npm init -y
           #   npm install

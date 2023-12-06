@@ -9,8 +9,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Install dependencies
-        run: npm install
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.12
+      - name: Initiate npm
+        run: npm init -y
+      - name: Write build in Package
+        run: |
+          python add_build.py
+          npm install
       - name: Build project
         run: npm run build
       - name: Test project
@@ -27,6 +35,7 @@ jobs:
       - name: Deploy to staging
         run: |
           echo "Deploy to staging"
+
   deploy-failure:
     runs-on: ubuntu-latest
     needs: build

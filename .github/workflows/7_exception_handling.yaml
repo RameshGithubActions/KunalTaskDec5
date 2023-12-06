@@ -23,14 +23,11 @@ jobs:
         run: npm run build
       - name: Test project
         run: npm test
-      - name: Show Github Ref
-        run: echo "Github Ref is ${{ github.ref }}"
 
   deploy-success:
     runs-on: ubuntu-latest
     needs: build
-    # if: ${{ success() && github.ref == 'efs/heads/main' }}
-    if: ${{ success() }}
+    if: ${{ success() && github.ref == 'refs/heads/main' }}
     steps:
       - name: Deploy to production
         run: |
@@ -42,8 +39,7 @@ jobs:
   deploy-failure:
     runs-on: ubuntu-latest
     needs: build
-    # if: ${{ failure() || github.ref!= 'efs/heads/main' }}
-    if: ${{ failure() }}
+    if: ${{ failure() || github.ref!= 'refs/heads/main' }}
     steps:
       - name: Deploy to production (failure)
         run: |

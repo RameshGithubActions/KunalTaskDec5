@@ -11,11 +11,12 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dependencies
         run: |
-          # Check the version of Node and npm
+          #   Check the version of Node and npm
           node -v
           npm -v
-          npm init -y
-          npm install
+          ls
+          #   npm init -y
+          #   npm install
       - name: Build project
         run: npm run build
       - name: Test project

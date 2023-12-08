@@ -1,4 +1,4 @@
-name: Custom Python Action Workflow
+name: Custom Python Action Workflow 2
 on:
   push:
     branches:
@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout # Removed the version Number :: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.12
       - name: Run Custom Action
-        run: python main.py
+        run: ramesh-github-actions/Act1_CustomActionUsingPython
         

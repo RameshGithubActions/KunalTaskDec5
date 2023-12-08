@@ -30,11 +30,9 @@ jobs:
     if: ${{ success() && github.ref == 'refs/heads/main' }}
     steps:
       - name: Deploy to production
-        run: |
-          echo "Deploy to production"
+        run: echo "Deploy to production"
       - name: Deploy to staging
-        run: |
-          echo "Deploy to staging"
+        run: echo "Deploy to staging"
 
   deploy-failure:
     runs-on: ubuntu-latest
@@ -42,10 +40,7 @@ jobs:
     if: ${{ failure() || github.ref!= 'refs/heads/main' }}
     steps:
       - name: Deploy to production (failure)
-        run: |
-          echo "Deploy to production failed"
-        #   exit 1
+        run: echo "Deploy to production failed"
       - name: Deploy to staging (failure)
-        run: |
-          echo "Deploy to staging failed"
-        #   exit 1
+        run: echo "Deploy to staging failed"
+        

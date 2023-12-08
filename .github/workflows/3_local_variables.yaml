@@ -15,7 +15,7 @@ jobs:
           NORMAL_LOCAL_STRING="Hello, World!"
           NORMAL_LOCAL_INTEGER=5678
 
-          echo "Normal local strign: $NORMAL_LOCAL_STRING"
+          echo "Normal local string: $NORMAL_LOCAL_STRING"
           echo "Normal local integer: $NORMAL_LOCAL_INTEGER"
           
           echo "Using Environment - local string: ${{ env.ENV_LOCAL_STRING }}"

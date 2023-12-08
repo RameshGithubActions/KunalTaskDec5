@@ -1,4 +1,4 @@
-name: Workflow Run
+name: Workflow Run 1
 on:
   workflow_run:
     workflows: [Global Variables Example]

@@ -14,6 +14,6 @@ jobs:
         with:
           python-version: 3.12
       - name: Run Custom Action
-        run: ramesh-github-actions/Act1_CustomActionUsingPython
-        
+        run: RameshGithubActions/Act1_CustomActionUsingPython
+
         

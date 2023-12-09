@@ -9,12 +9,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout
-        # Removed the version Number :: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.12
       - name: Run Custom Action
-        uses: RameshGithubActions/Act1_CustomActionUsingPython@v1
+        uses: RameshGithubActions/Act1_CustomActionUsingPython
 
         

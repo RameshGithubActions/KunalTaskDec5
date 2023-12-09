@@ -1,4 +1,4 @@
-name: Nested If-Else Example
+name: 1. Nested If-Else Example
 
 on:
   push:

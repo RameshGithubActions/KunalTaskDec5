@@ -1,0 +1,25 @@
+# Example of reusing a workflow in GitHub
+# .github/workflows/reusable-workflow.yml
+
+name: Reusable Workflow
+
+on:
+  workflow_call:
+    inputs:
+      input1:
+        required: true
+        type: string
+    # outputs:
+    #   output1:
+    #     type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build code
+        run: npm run build
+      - name: Set output
+        id: set_output
+        run: echo "::set-output name=output1::value1"

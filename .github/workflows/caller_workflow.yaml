@@ -1,0 +1,15 @@
+# .github/workflows/caller-workflow.yml
+
+name: Caller Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    uses: ./.github/workflows/reusable_workflow.yaml
+    with:
+      input1: value1
+ 

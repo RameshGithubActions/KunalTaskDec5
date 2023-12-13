@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Echoing
-        run: ech "Checking the nested workflow"
+        run: echo "Checking the nested workflow"
       - name: Set output
         id: set_output
         run: echo "::set-output name=output1::value1"

@@ -7,7 +7,7 @@ on:
 
 jobs:
   Sample_Job:
-    runs-on: generic-workflow-1-7cdfb6b4b8-zf49j
+    runs-on: ubuntu-latest
     steps:
       - name: Sample Steps
         run: echo "The input arguement is ${{ inputs.input_arg }}"

@@ -54,17 +54,17 @@ jobs:
         run: |
           echo "Step 1: ${{ env.MY_GLOBAL_VARIABLE }}"
 
-  Nested_Generic_Workflow:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-      - name: Run the Previous Workflow
-        uses: ./.github/workflows/sample_workflow.yaml
-        with:
-          input_arg: "Hello World!"
-      - name: After running the First Workflow
-        run: echo "End of Original Workflow"
+  # Nested_Generic_Workflow:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout Code
+  #       uses: actions/checkout@v2
+  #     - name: Run the Previous Workflow
+  #       uses: ./.github/workflows/sample_workflow.yaml
+  #       with:
+  #         input_arg: "Hello World!"
+  #     - name: After running the First Workflow
+  #       run: echo "End of Original Workflow"
 
   # Custom_Python_Action:
   #   runs-on: ubuntu-latest

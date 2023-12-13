@@ -1,0 +1,14 @@
+name: Nested Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Sample_Job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sample Steps
+        run: echo "Checking nested workflows"
+        

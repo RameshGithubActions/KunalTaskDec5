@@ -1,0 +1,13 @@
+name: Workflow Run
+on:
+  workflow_run:
+    workflows: [Nested Workflow]
+    types: [completed]
+jobs:
+  echo-string:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Global Variables Completed Check Again"
+          WORKFLOW_RUN_VARIABLE=123
+          echo "Workflow Run Variable: $WORKFLOW_RUN_VARIABLE"

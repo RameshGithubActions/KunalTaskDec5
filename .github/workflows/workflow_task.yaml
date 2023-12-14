@@ -77,7 +77,13 @@ jobs:
           python-version: 3.12
       - name: Run Custom Action
         uses: RameshGithubActions/CusAct1_Python@v3
-        
+        with:
+          num1: 5
+          num2: 7
+        id: multiply_numbers
+      - name: Display Result
+        run: echo "The sum is ${{ steps.add_numbers.outputs.result }}"
+
   # Exception_Handling_Build:
   #   runs-on: ubuntu-latest
   #   steps:

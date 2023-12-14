@@ -76,11 +76,8 @@ jobs:
         with:
           python-version: 3.12
       - name: Run Custom Action
-        uses: RameshGithubActions/CusAct1_Python
+        uses: RameshGithubActions/CusAct1_Python@v3
         
-
-
-
   # Exception_Handling_Build:
   #   runs-on: ubuntu-latest
   #   steps:

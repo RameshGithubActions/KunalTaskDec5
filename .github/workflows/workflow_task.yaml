@@ -68,18 +68,18 @@ jobs:
 
   Custom_Python_Action:
     runs-on: ubuntu-latest
-    name: Returns the number square
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.12
       - name: Run Custom Action
-        uses: RameshGithubActions/CustomAct1_Python@v2
-
+        uses: RameshGithubActions/CusAct1_Python
         
+
+
 
   # Exception_Handling_Build:
   #   runs-on: ubuntu-latest

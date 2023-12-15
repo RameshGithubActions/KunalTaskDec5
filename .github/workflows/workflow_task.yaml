@@ -69,30 +69,23 @@ jobs:
   Custom_Python_Action:
     runs-on: ubuntu-latest
     steps:
-      # - name: Checkout code
-      #   uses: actions/checkout@v2
-      #   with:
-      #     repository: RameshGithubActions/CusAct1_Python
-      #     ref: main
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       # - name: Set up Python
       #   uses: actions/setup-python@v2
       #   with:
       #     python-version: 3.12
 
-      # - name: Run Custom Action
-      #   uses: ./RameshGithubActions/CusAct1_Python
-      #   with:
-      #     num1: 5
-      #     num2: 7
-      #   id: multiply_numbers
+      - name: Run Custom Action
+        uses: RameshGithubActions/CusAct1_Python@v2
+        with:
+          num1: 5
+          num2: 7
+        id: costom_action
 
-      # - name: Display Result
-      #   run: echo "The sum is ${{ steps.add_numbers.outputs.result }}"
-      - name: Check Files
-        run: |
-          cd /home/runner/work/KunalTaskDec5/KunalTaskDec5
-          ls
+      - name: Display Result
+        run: echo "The sum is ${{ steps.add_numbers.outputs.result }}"
 
   # Exception_Handling_Build:
   #   runs-on: ubuntu-latest

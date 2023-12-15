@@ -78,15 +78,14 @@ jobs:
       #     python-version: 3.12
 
       - name: Run Custom Action
-        shell: bash
-        uses: RameshGithubActions/CusAct1_Python@v19
+        uses: RameshGithubActions/CusAct1_Python@v20
         with:
           num1: 5
           num2: 7
         id: costom_action
 
       - name: Display Result
-        run: echo "The sum is ${{ steps.costom_action.outputs.result }}"
+        run: echo "The result is ${{ env.RESULT }}"
 
 
   # Exception_Handling_Build:

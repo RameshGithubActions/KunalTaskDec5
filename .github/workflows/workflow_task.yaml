@@ -91,7 +91,7 @@ jobs:
       #   run: echo "The sum is ${{ steps.add_numbers.outputs.result }}"
       - name: Check Files
         run: |
-          cd /home/runner/work/KunalTaskDec5
+          cd /home/runner/work/KunalTaskDec5/KunalTaskDec5
           ls
 
   # Exception_Handling_Build:

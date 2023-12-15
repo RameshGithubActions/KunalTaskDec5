@@ -91,10 +91,8 @@ jobs:
       #   run: echo "The sum is ${{ steps.add_numbers.outputs.result }}"
       - name: Check Files
         run: |
-          ls
-          cd ..
-          ls
-          pwd
+          cd
+          
 
 
   # Exception_Handling_Build:

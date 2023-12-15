@@ -85,7 +85,7 @@ jobs:
         id: costom_action
 
       - name: Display Result
-        run: echo "The sum is ${{ steps.add_numbers.outputs.result }}"
+        run: echo "The sum is ${{ steps.main.outputs.result }}"
 
 
   # Exception_Handling_Build:

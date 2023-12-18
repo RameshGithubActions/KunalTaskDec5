@@ -1,9 +1,10 @@
 import sys
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        variable_from_argument = sys.argv[1]
-        print(f"Variable from argument: {variable_from_argument}")
-        
-    else:
-        print("No arguments provided!!!!")
+    n = len(sys.argv)
+    result = 1
+    for i in range(1, n):
+        print(sys.argv[i])
+    for i in range(1, n):
+        result *= float(sys.argv[i])
+    print("Result:", result)

@@ -1,0 +1,19 @@
+name: Python Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  System_Argument:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Sys Argv
+        run: python check.py 5 6
+        
+
+

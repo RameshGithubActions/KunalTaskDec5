@@ -78,7 +78,7 @@ jobs:
       #     python-version: 3.12
 
       - name: Run Custom Action
-        uses: RameshGithubActions/CusAct1_Python@v23
+        uses: RameshGithubActions/CusAct1_Python@v24
         with:
           num1: 1
           num2: 7

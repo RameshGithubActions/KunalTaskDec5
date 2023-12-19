@@ -89,7 +89,10 @@ jobs:
         run: echo "The result is ${{ env.RESULT }}"
 
       - name: Pass Arguements
-        run: pwd
+        run: |
+          cd ../../
+          cd _actions/RameshGithubActions/CusAct1_Python/v24
+          pwd
         # run: python _actions/RameshGithubActions/CusAct1_Python/v24/src/main.py ${{ env.NUM1 }} ${{ env.NUM2 }} ${{ env.NUM3 }}
         # env:
         #   NUM1: ${{ secrets.NUM1 }}

@@ -79,9 +79,10 @@ jobs:
 
       - name: Run Custom Action
         uses: RameshGithubActions/CusAct1_Python@v23
-        # with:
-        #   num1: 5
-        #   num2: 7
+        with:
+          num1: 1
+          num2: 7
+          num3: 8
         id: costom_action
 
       - name: Display Result

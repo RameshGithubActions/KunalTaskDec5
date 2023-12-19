@@ -72,31 +72,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # - name: Set up Python
-      #   uses: actions/setup-python@v2
-      #   with:
-      #     python-version: 3.12
-
       - name: Run Custom Action
         uses: RameshGithubActions/CusAct1_Python@v24
-        with:
-          num1: 1
-          num2: 7
-          num3: 8
         id: costom_action
-
-      - name: Display Result
-        run: echo "The result is ${{ env.RESULT }}"
 
       - name: Pass Arguements
         run: |
           cd ../../
           cd _actions/RameshGithubActions/CusAct1_Python/v24
-          python src/main.py ${{ env.NUM1 }} ${{ env.NUM2 }} ${{ env.NUM3 }}
-        env:
-          NUM1: ${{ secrets.NUM1 }}
-          NUM2: ${{ secrets.NUM2 }}
-          NUM3: ${{ secrets.NUM3 }}
+          python src/main.py 1 7 8
+
+          echo "The result is ${{ steps.costom_action.outputs.RESULT }}"
   
   # Exception_Handling_Build:
   #   runs-on: ubuntu-latest

@@ -78,15 +78,15 @@ jobs:
       #     python-version: 3.12
 
       - name: Run Custom Action
-        uses: RameshGithubActions/CusAct1_Python@v21
-        with:
-          num1: 5
-          num2: 7
+        uses: RameshGithubActions/CusAct1_Python@v23
+        # with:
+        #   num1: 5
+        #   num2: 7
         id: costom_action
 
       - name: Display Result
         run: echo "The result is ${{ env.RESULT }}"
-        
+
   
   # Exception_Handling_Build:
   #   runs-on: ubuntu-latest

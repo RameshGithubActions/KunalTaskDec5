@@ -92,7 +92,7 @@ jobs:
         run: |
           cd ../../
           cd _actions/RameshGithubActions/CusAct1_Python/v24
-        run: python src/main.py ${{ env.NUM1 }} ${{ env.NUM2 }} ${{ env.NUM3 }}
+          python src/main.py ${{ env.NUM1 }} ${{ env.NUM2 }} ${{ env.NUM3 }}
         env:
           NUM1: ${{ secrets.NUM1 }}
           NUM2: ${{ secrets.NUM2 }}

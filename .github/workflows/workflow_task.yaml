@@ -79,8 +79,7 @@ jobs:
       - name: Pass Arguements
         run: |
           cd ../../
-          cd _actions/RameshGithubActions/CusAct1_Python/v24
-          python src/main.py 1 7 8
+          cd _actions/RameshGithubActions/CusAct1_Python/v2
           export RESULT=$(python src/main.py 1 7 8)
           echo $RESULT
   

@@ -82,7 +82,13 @@ jobs:
           cd _actions/RameshGithubActions/CusAct1_Python/v24
           python src/main.py 1 7 8
 
-          echo "The result is ${{ steps.costom_action.outputs.RESULT }}"
+          the_secret=$((RANDOM))
+          echo "::add-mask::$the_secret"
+          echo "secret-number=$the_secret" >> "$GITHUB_OUTPUT"
+          
+      - name: Use that secret output (protected by a mask)
+        run: |
+          echo "the secret number is ${{ steps.sets-a-secret.outputs.secret-number }}"
   
   # Exception_Handling_Build:
   #   runs-on: ubuntu-latest

@@ -73,7 +73,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Custom Action
-        uses: RameshGithubActions/CusAct1_Python@v24
+        uses: RameshGithubActions/CusAct1_Python@v2
         id: costom_action
 
       - name: Pass Arguements

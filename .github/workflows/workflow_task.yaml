@@ -73,15 +73,15 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Custom Action
-        uses: RameshGithubActions/CusAct1_Python@v29
+        uses: RameshGithubActions/CusAct1_Python@v30
         id: costom_action
 
       - name: Pass Arguements
         run: |
           cd ../../
-          cd _actions/RameshGithubActions/CusAct1_Python/v29
-          export RESULT=$(python src/main.py 1 7 8)
-          echo "Reult from Yaml script: "
+          cd _actions/RameshGithubActions/CusAct1_Python/v30
+          export RESULT=$(python src/main.py 1 2 3 4 5)
+          echo "Reult: "
           echo $RESULT
   
   # Exception_Handling_Build:

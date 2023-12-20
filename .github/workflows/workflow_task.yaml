@@ -81,6 +81,7 @@ jobs:
           cd ../../
           cd _actions/RameshGithubActions/CusAct1_Python/v28
           export RESULT=$(python src/main.py 1 7 8)
+          echo "Reult from Yaml script: "
           echo $RESULT
   
   # Exception_Handling_Build:
